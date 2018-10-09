@@ -1,12 +1,8 @@
 import javafx.scene.paint.Color;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -14,11 +10,9 @@ import java.util.Scanner;
  */
 public class MatrixGrayImage implements GrayImage {
 
-
-
-    private ByteGrayColor[][] pixels=null;
-    private final int width=0;
-    private final int height=0;
+    private final ByteGrayColor[][] pixels;
+    private final int width;
+    private final int height;
 
     @Override
     public GrayColor getPixelGrayColor(int x, int y) {
@@ -36,7 +30,7 @@ public class MatrixGrayImage implements GrayImage {
     }
 
     @Override
-    public int getGraylevel(int x, int y) {
+    public int getGrayLevel(int x, int y) {
 
         // TODO : Changer le code pour retourner le bon niveau de gris.
 
@@ -66,8 +60,11 @@ public class MatrixGrayImage implements GrayImage {
     }
 
     public MatrixGrayImage(int width, int height){
-        /* TODO : Initialiser les attributs de l'instance.
+        /* TODO : Changer le code pour initialiser correctement les attributs de l'instance.
          */
+        this.width=0;
+        this.height=0;
+        this.pixels=null;
     }
 
 
@@ -113,7 +110,7 @@ public class MatrixGrayImage implements GrayImage {
 
             for(int y = 0; y < height; y++){
                 for(int x = 0; x < width; x++) {
-                    printWriter.println(getGraylevel(x,y));
+                    printWriter.println(getGrayLevel(x,y));
                 }
             }
             printWriter.close();
