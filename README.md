@@ -6,5 +6,5 @@ Ce projet est l'occasion de travailler sur la représentation et la manipulation
 
 ## Membres du projet
 
-- NOM prénom du premier participant
-- NOM prénom du deuxième participant
+- YOUSSOUF Zaïnir
+
