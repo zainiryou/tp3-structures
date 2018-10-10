@@ -16,55 +16,42 @@ public class MatrixGrayImage implements GrayImage {
 
     @Override
     public GrayColor getPixelGrayColor(int x, int y) {
-
-        // TODO : Changer le code pour retourner la bonne couleur de gris.
-
-        return new ByteGrayColor(ByteGrayColor.MAXIMUM_GRAY_VALUE);
+        return this.pixels[x][y];
     }
 
     @Override
-    public void setGrayLevel(int graylevel, int x, int y) {
-
-        // TODO : Changer le code pour mettre à jour la couleur.
-
+    public void setGrayLevel(int grayLevel, int x, int y) {
+        this.pixels[x][y].setGrayLevel(grayLevel);
     }
 
     @Override
     public int getGrayLevel(int x, int y) {
-
-        // TODO : Changer le code pour retourner le bon niveau de gris.
-
-        return ByteGrayColor.MAXIMUM_GRAY_VALUE;
+        return this.pixels[x][y].getGrayLevel();
     }
 
     @Override
     public Color getPixelColor(int x, int y) {
-
-        // TODO : Changer le code pour retourner la bonne couleur.
-
-        return Color.WHITE;
+        return this.pixels[x][y].getColor();
     }
 
     @Override
     public int getWidth() {
-        // TODO : Changer le code pour retourner la bonne largeur.
-
-        return 600;
+        return this.width;
     }
-
     @Override
     public int getHeight() {
-        // TODO : Changer le code pour retourner la bonne hauteur.
-
-        return 400;
+        return this.height;
     }
 
     public MatrixGrayImage(int width, int height){
-        /* TODO : Changer le code pour initialiser correctement les attributs de l'instance.
-         */
-        this.width=0;
-        this.height=0;
-        this.pixels=null;
+        int i,j;
+        this.width= width;
+        this.height=height;
+        this.pixels=new ByteGrayColor[width+1][height+1];
+        for(i=0; i<=width; i++){
+            for(j=0; j<=height; j++)
+                pixels[i][j] = new ByteGrayColor();
+        }
     }
 
 
