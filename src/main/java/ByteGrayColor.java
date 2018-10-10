@@ -11,16 +11,15 @@ public class ByteGrayColor implements GrayColor {
     private static final int OPACITY = 1;
 
     public int getGrayLevel() {
-        // TODO : Renvoyer le niveau de gris de l'instance.
-        return 0;
+        return this.grayLevel;
     }
 
     public ByteGrayColor(){
-        // TODO : Initialiser l'attribut grayLevel de l'instance avec MINIMUM_GRAY_VALUE.
+        this.grayLevel = MINIMUM_GRAY_VALUE;
     }
 
     public ByteGrayColor(int grayLevel) {
-        // TODO : Initialiser l'attribut grayLevel de l'instance.
+        this.grayLevel = grayLevel;
     }
 
     @Override
@@ -33,13 +32,12 @@ public class ByteGrayColor implements GrayColor {
 
     @Override
     public void setGrayLevel(int grayLevel) {
-        // TODO : Changer le niveau de gris de la couleur.
+        this.grayLevel = grayLevel;
     }
 
     @Override
     public int compareTo(GrayColor o) {
-        // TODO : Renvoyer la différence de niveau de gris.
-        return 0;
+        return this.grayLevel - o.getGrayLevel();
     }
 
 }
