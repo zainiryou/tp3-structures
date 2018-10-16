@@ -21,7 +21,7 @@ public class Display implements Initializable {
 
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
 
-        Invert i = new Invert();
+        DecreaseGrayLevels i = new DecreaseGrayLevels();
         i.applyTo(image);
 
         render();
