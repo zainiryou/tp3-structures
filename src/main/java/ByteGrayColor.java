@@ -40,4 +40,9 @@ public class ByteGrayColor implements GrayColor {
         return this.grayLevel - o.getGrayLevel();
     }
 
+    @Override
+    public int getMaximumGrayLevel(){
+        return MAXIMUM_GRAY_VALUE;
+    }
+
 }

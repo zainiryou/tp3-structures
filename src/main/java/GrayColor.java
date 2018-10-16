@@ -8,4 +8,5 @@ public interface GrayColor extends Comparable<GrayColor> {
     int getGrayLevel();
     void setGrayLevel(int grayLevel);
     Color getColor();
+    int getMaximumGrayLevel();
 }
