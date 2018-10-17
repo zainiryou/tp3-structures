@@ -21,7 +21,7 @@ public class Display implements Initializable {
 
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
 
-        Outline i = new Outline(10);
+        Pixelate i = new Pixelate();
         i.applyTo(image);
 
         render();
