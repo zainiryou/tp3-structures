@@ -4,23 +4,17 @@ public class DecreaseGrayLevels implements Transform {
 
     @Override
     public void applyTo(GrayImage image){
-        int i,j,t;
+        int i,j,k,t;
 
-        tab[0] = (256 / nbGrayLevels) - 1;
-        for(t=1; t<nbGrayLevels; t++)
-            tab[t] = tab[t-1] + (256 / nbGrayLevels);
-        for(i=0; i<nbGrayLevels; i++)
-            System.out.println(tab[i]);
-        t = 0;
+        tab[0] = 0;
+        tab[1] = (256 / nbGrayLevels) - 1;
+        for(k=2; k<nbGrayLevels; k++)
+            tab[k] = tab[k-1] + (256 / nbGrayLevels);
 
         for(i=0; i<=image.getWidth(); i++) {
             for (j = 0; j <= image.getHeight(); j++) {
-                if(image.getGrayLevel(i, j) <=tab[t]) {
-                    image.setGrayLevel(tab[t], i, j);
-                    t=0;
-                }
-                else
-                    t++;
+                t = image.getGrayLevel(i, j) / 32;
+                image.setGrayLevel(tab[t], i, j);
             }
         }
     }
