@@ -4,7 +4,7 @@ public class SymetryCentral implements Transform {
     public void applyTo(GrayImage image){
         int hauteur = image.getHeight();
         int largeur = image.getWidth();
-        int temp, count = 2;
+        int count = 2;
         symetryx(image, hauteur, largeur, count);
         symetryy(image, hauteur, largeur, count);
 

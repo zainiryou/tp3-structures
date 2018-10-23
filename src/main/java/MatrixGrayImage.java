@@ -106,4 +106,9 @@ public class MatrixGrayImage implements GrayImage {
             e.printStackTrace();
         }
     }
+
+    public GrayImage clone() {
+        GrayImage image2 = this;
+        return image2;
+    }
 }
