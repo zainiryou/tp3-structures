@@ -107,6 +107,7 @@ public class MatrixGrayImage implements GrayImage {
         }
     }
 
+    @Override
     public GrayImage clone() {
         GrayImage image2 = this;
         return image2;

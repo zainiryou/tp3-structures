@@ -7,4 +7,5 @@ public interface GrayImage extends Image{
     void setGrayLevel(int grayLevel, int x, int y);
     int getGrayLevel(int x, int y);
     GrayColor getPixelGrayColor(int x, int y);
+    GrayImage clone();
 }
